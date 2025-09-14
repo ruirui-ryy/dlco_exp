@@ -1,2 +1,4 @@
 *
-* > .gitignore/**/new/*.v
+!*/
+!**/new/*.v
+!.gitignore
