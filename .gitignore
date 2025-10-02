@@ -1,4 +1,4 @@
 *
 !*/
-!*.srcs/sources_1/new/*.v
+!**/*.srcs/sources_1/new/*.v
 !.gitignore
