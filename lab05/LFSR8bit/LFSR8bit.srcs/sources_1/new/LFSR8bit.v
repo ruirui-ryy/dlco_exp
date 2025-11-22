@@ -24,6 +24,7 @@ module LFSR8bit(
     input CLK100MHZ,
     input clk,
     input rst,
+    input [7:0] seed,
     output reg [7:0] seg,
     output reg [7:0] AN
     );
@@ -34,7 +35,7 @@ module LFSR8bit(
     assign feedback = dout[0] ^ dout[2] ^ dout[3] ^ dout[4];
     always @(posedge clk or posedge rst) begin
         if (rst) begin
-            dout <= 8'b00000001;
+            dout <= seed;
         end else begin
             dout <= {feedback, dout[7:1]};
         end
